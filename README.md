@@ -7,9 +7,11 @@ There are many videos demonstrating spirograph on YouTube, one leading YouTuber 
 [![image](https://github.com/user-attachments/assets/b6e98b52-f7bd-442b-9e1a-8dca88a72712)](https://www.youtube.com/shorts/D1YGBlOxY-4) | [![image](https://github.com/user-attachments/assets/ec271177-d16a-453d-a0f4-083f4cf2bd0c)](https://www.youtube.com/shorts/56ePZn__BZ0) | [![image](https://github.com/user-attachments/assets/60f81ab9-09d7-487b-a689-1e8179639f87)](https://www.youtube.com/shorts/pJWE5Utngkg) | [![image](https://github.com/user-attachments/assets/7a024d1b-6f44-40fa-a9de-d9d4ebbf0d36)](https://www.youtube.com/shorts/LsJVOOwtLQE)
 | --- | --- | --- | --- |
 ## How to use
-After you know what is a spirograph, now is the time to use my application to animate one!
+After you know what is a spirograph, now is the time to use this application to animate one!
 ### Input data
-- Create a text-formatted file, as my application takes information from files.
+- Create a text-formatted file, as this application takes information from files.
 - Have the length, speed, and initial angle of the spirograph you wanted to animate, [@WangBaoWei](https://www.youtube.com/@WangBaoWei/shorts) is a very good source of them.
 - If you don't know the initial angle, just put zero, but if you do however, make sure they are in radians instead of degrees.
-- 
+- For each vector, list its info in order of initial angle, length, then speed, separated by a new line, then repeat.
+- When finished with one list of vectors, write "z" on a new line to tell the application that it ended, if needed, start another list of vectors as some graphs may need multiple lists of vectors to generate, like [this](https://www.youtube.com/shorts/7jpKpRv4zyI).
+If you are having trouble understanding this explanation, try to take "example.dc" as a reference
