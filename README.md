@@ -8,10 +8,17 @@ There are many videos demonstrating spirograph on YouTube, one leading YouTuber 
 | --- | --- | --- | --- |
 ## How to use
 After you know what is a spirograph, now is the time to use this application to animate one!
-### Input data
+### Inputting data
 - Create a text-formatted file, as this application takes information from files.
 - Have the length, speed, and initial angle of the spirograph you wanted to animate, [@WangBaoWei](https://www.youtube.com/@WangBaoWei/shorts) is a very good source of them.
 - If you don't know the initial angle, just put zero, but if you do however, make sure they are in radians instead of degrees.
 - For each vector, list its info in order of initial angle, length, then speed, separated by a new line, then repeat.
 - When finished with one list of vectors, write "z" on a new line to tell the application that it ended, if needed, start another list of vectors as some graphs may need multiple lists of vectors to generate, like [this](https://www.youtube.com/shorts/7jpKpRv4zyI).
-If you are having trouble understanding this explanation, try to take "example.dc" as a reference
+
+If you are having trouble understanding this explanation, try to take [example.dc](./example.dc) as a reference as it demonstrates [this](https://www.youtube.com/shorts/7jpKpRv4zyI) spirograph.
+### Application usage
+Note: all following instructions are designed for Linux systems, if you are using other systems, please compile the application yourself and only use the instructions as a reference, as the process might be similar
+- Install [SFML](https://www.sfml-dev.org) to support gui.
+- If you wants to compile the application your own, run [make.bash](make.bash)
+## Licence
+This project is licensed under the GPL License - see the [LICENCE](LICENCE.txt) file for details.
