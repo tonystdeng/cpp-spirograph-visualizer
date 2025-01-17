@@ -23,7 +23,10 @@ Note: all following instructions are designed for Linux systems, if you are usin
 - Run `./spirograph <input file path>` in your terminal, then expect a GUI!
 - In the GUI, press `c` to disable the rotation outline, and press `p` to pause the animation.
 
-Example sc
-| With circle outline | Without circle outline | 
+Example screenshot:
+| With circle outline(default) | Without circle outline | Paused animation|
+| -- | -- | -- |
+![image](https://github.com/user-attachments/assets/5b7831dd-45e4-4189-8592-db1487514281)|![image](https://github.com/user-attachments/assets/87521db3-49b7-4752-910e-1a3242829af7)|![image](https://github.com/user-attachments/assets/2c36252b-1af4-4741-8e20-a7ec5f505de0)
+
 ## Licence
 This project is licensed under the GPL License - see the [LICENCE](LICENCE.txt) file for details.
