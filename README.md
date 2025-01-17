@@ -20,7 +20,7 @@ If you are having trouble understanding this explanation, try to take [example.d
 Note: all following instructions are designed for Linux systems, if you are using other systems, please compile the application yourself and only use the instructions as a reference, as the process might be similar
 - Install [SFML](https://www.sfml-dev.org) to support gui.
 - If you want to compile the application on your own, run [make.bash](make.bash) or copy the commands from the file and run them in your terminal.
-- Run `./spirograph <input file path>` in your terminal, then expect a GUI!
+- Run `./spirograph <input file path>` in your terminal ([spirograph](spirograph) is a Linux executable file), then expect a GUI!
 - In the GUI, press `c` to disable the rotation outline, and press `p` to pause the animation.
 
 Example screenshot:
