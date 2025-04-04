@@ -6,7 +6,7 @@ bool checkClose (sf::Event,sf::RenderWindow*);
 Game::Game(std::string path)
 {
     getLine(path);
-    window=new sf::RenderWindow(sf::VideoMode(width,height),"fps: ");
+    window=new sf::RenderWindow(sf::VideoMode({width,height}),"fps: ");
     window->setFramerateLimit(60);
 }
 
@@ -36,8 +36,8 @@ void Game::getLine(std::string path)// function copied from previous code, remov
         // avoid segmentation fault
         lengthes.push_back(std::vector<double>());
         dps.push_back(std::vector<double>());
-        lines.push_back(sf::VertexArray(sf::LineStrip));
-        record.push_back(sf::VertexArray(sf::LineStrip));
+        lines.push_back(sf::VertexArray(sf::PrimitiveType::LineStrip));
+        record.push_back(sf::VertexArray(sf::PrimitiveType::LineStrip));
         lineNum.push_back(0);
         // end^
         std::vector<al> circles=filereturn[j].first;
@@ -60,7 +60,7 @@ void Game::getLine(std::string path)// function copied from previous code, remov
     for (int j=0;j<filereturn.size();j++){
         double scale=hw/biggestLen;lineSum[j]*=scale;
         //std::cout<<biggestLen;
-        sf::Vertex origin(sf::Vector2f(hw,hh));
+        sf::Vertex origin{{hw,hh}};
         unsigned char color=255/filereturn.size()*(j+1);
         origin.color={255,color,color};
         lines[j].append(origin);
@@ -180,27 +180,27 @@ lineinfo fileLoader(std::string path,std::vector<std::vector<double>>& angles){/
 
 bool Game::checkEvent ()
 {
-    while (window->pollEvent(event)){
-        if (event.type==sf::Event::Closed){
+    while (const std::optional event = window->pollEvent()){
+        if (event->getIf<sf::Event::Closed>()){
             window->close();
             return true;}
-        if (event.type==sf::Event::KeyPressed){
-            if (event.key.code==sf::Keyboard::C){
+        if (const auto * key=event->getIf<sf::Event::KeyPressed>()){
+            if (key->code==sf::Keyboard::Key::C){
                 showCircles=1-showCircles;
-            }else if (event.key.code==sf::Keyboard::P){
+            }else if (key->code==sf::Keyboard::Key::P){
                 window->clear(sf::Color::Black);
                 for (int i=0;i<lines.size();i++){
                     window->draw(record[i]);
                 }
                 window->display();
                 while(1){
-                    while (window->pollEvent(event)){
-                        if (event.type==sf::Event::Closed){
+                    while (const std::optional event = window->pollEvent()){
+                        if (event->is<sf::Event::Closed>()){
                             window->close();
                             return true;
                         }
-                        else if (event.type==sf::Event::KeyPressed){
-                            if (event.key.code==sf::Keyboard::P) {
+                        else if (event->getIf<sf::Event::KeyPressed>()){
+                            if (key->code==sf::Keyboard::Key::P) {
                                 return false;
                             }
                         }

@@ -11,6 +11,7 @@
 #include <cmath>
 #include <string>
 #include <cstdlib>
+#include <algorithm>
 
 
 #include <SFML/Graphics.hpp>
@@ -24,7 +25,6 @@ const sf::Time fpsupdateInterval = sf::seconds(1.0f);
 class Game// Ad
 {
     public:
-    sf::Event event;
     sf::RenderWindow *window;
 
     sf::Clock clock;
